@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Iniciando la etapa de compilación..."
+      - echo "Inyectando la fecha y hora en el index.html..."
+      - |
+        sed -i 's|</body>|<div style="text-align: center; margin-top: 30px; color: #888; font-size: 14px; font-weight: bold;">Compilado automáticamente por AWS CodeBuild <br>Fecha de despliegue: '"$(date '+%Y-%m-%d %H:%M:%S')"'.</div></body>|g' index.html
+
+artifacts:
+  files:
+    - index.html
+    - appspec.yml
+    - buildspec.yml
