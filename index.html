@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Servidor Apache</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #7b241c, #c0392b);
+        }
+
+        .header {
+            background: #641e16;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+        }
+
+        .panel {
+            background: white;
+            width: 650px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 50px;
+        }
+
+        h1 {
+            color: #c0392b;
+            margin-top: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .info {
+            margin-top: 20px;
+            color: #333;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            margin-top: 25px;
+            background: #c0392b;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #922b21;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="header">
+    Apache HTTP Server | Demo instalación automática
+</div>
+
+<div class="container">
+
+<div class="panel">
+
+    <div class="icon">🖥️</div>
+
+    <h1>Servidor Activo</h1>
+
+    <div class="badge">
+        ONLINE
+    </div>
+
+    <div class="info">
+        Servicio: Apache HTTP Server<br>
+        Puerto: 80<br>
+        Protocolo: HTTP<br>
+        Estado: Ejecutándose correctamente
+    </div>
+
+    <button class="btn" onclick="location.href='info.txt'">
+        Ver estado generado por Java
+    </button>
+
+</div>
+
+</div>
+
+</body>
+</html>
