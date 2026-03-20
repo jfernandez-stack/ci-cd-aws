@@ -1,48 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Servidor Web</title>
+    <title>Servidor Apache</title>
 
     <style>
 
         body {
-            background: #f8f4f4;
+            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-            margin-top: 100px;
+            background: linear-gradient(135deg, #7b241c, #c0392b);
         }
 
-        .card {
-            background: #ffffff;
-            width: 550px;
-            margin: auto;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
-            border-top: 6px solid #c0392b;
+        .header {
+            background: #641e16;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+        }
+
+        .panel {
+            background: white;
+            width: 650px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 50px;
         }
 
         h1 {
             color: #c0392b;
+            margin-top: 10px;
         }
 
-        p {
-            color: #555;
-            font-size: 16px;
-        }
-
-        a {
-            color: white;
-            background: #c0392b;
-            padding: 10px 18px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
+        .badge {
             display: inline-block;
-            margin: 5px;
+            background: #27ae60;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 10px;
         }
 
-        a:hover {
+        .info {
+            margin-top: 20px;
+            color: #333;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            margin-top: 25px;
+            background: #c0392b;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
             background: #922b21;
         }
 
@@ -52,28 +81,36 @@
 
 <body>
 
-<div class="card">
+<div class="header">
+    Apache HTTP Server | Demo instalación automática
+</div>
+
+<div class="container">
+
+<div class="panel">
+
+    <div class="icon">🖥️</div>
 
     <h1>Servidor Activo</h1>
 
-    <p>El servidor Apache se encuentra funcionando correctamente</p>
+    <div class="badge">
+        ONLINE
+    </div>
 
-    <br>
+    <div class="info">
+        Servicio: Apache HTTP Server<br>
+        Puerto: 80<br>
+        Protocolo: HTTP<br>
+        Estado: Ejecutándose correctamente
+    </div>
 
-    <!-- botón recargar -->
-    <a href="index.html">
-        Recargar servidor
-    </a>
-
-    <br><br>
-
-    <!-- botón que usa Java -->
-    <a href="info.txt">
+    <button class="btn" onclick="location.href='info.txt'">
         Ver estado generado por Java
-    </a>
+    </button>
+
+</div>
 
 </div>
 
 </body>
-
 </html>
